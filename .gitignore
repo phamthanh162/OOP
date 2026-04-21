@@ -1,0 +1,25 @@
+# Bỏ qua thư mục do CMake sinh ra
+build/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+
+# Bỏ qua cài đặt cá nhân của Visual Studio 2026
+.vs/
+*.user
+*.suo
+*.db
+
+# Bỏ qua cài đặt cá nhân của Visual Studio Code
+.vscode/
+
+# Bỏ qua các file thực thi và file tạm của C++
+*.exe
+*.dll
+*.obj
+*.o
+*.pdb
+*.ilk
