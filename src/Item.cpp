@@ -1,17 +1,17 @@
 #include "Item.h"
-#include <utility> // Dùng cho std::move (tối ưu hiệu năng C++ hiện đại)
+#include <utility>
 
 Item::Item(std::string id, std::string title, double basePrice)
     : id(std::move(id)), title(std::move(title)), basePrice(basePrice) {}
 
-std::string Item::getTitle() const {
+std::string Item::GetTitle() const {
     return title;
 }
 
-std::string Item::getId() const {
+std::string Item::GetId() const {
     return id;
 }
 
-double Item::getBasePrice() const {
+double Item::GetBasePrice() const {
     return basePrice;
 }

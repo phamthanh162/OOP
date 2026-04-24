@@ -29,7 +29,22 @@ bool App::initGLFW() {
 bool App::initImGui() {
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
-    ImGui::StyleColorsDark(); // Giao diện nền đen chuyên nghiệp
+    
+    ImGuiIO& io = ImGui::GetIO(); (void)io; // Lấy đối tượng IO của ImGui
+    
+    // TẮT TÍNH NĂNG LƯU TRẠNG THÁI CỬA SỔ
+    io.IniFilename = nullptr;
+    
+    // --- BẮT ĐẦU NẠP FONT TIẾNG VIỆT ---
+    // Đường dẫn trỏ thẳng vào font Arial mặc định của mọi máy Windows
+    ImFont* font = io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\arial.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesVietnamese());
+    
+    if (font == nullptr) {
+        std::cerr << "CẢNH BÁO: Không thể tải font tiếng Việt. Đang dùng font mặc định!\n";
+    }
+    // --- KẾT THÚC NẠP FONT ---
+
+    ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 130");
     return true;
