@@ -48,7 +48,12 @@ set(IMGUI_SOURCES
 # 3. CẤU HÌNH DỰ ÁN CỦA NHÓM
 # ---------------------------------------------------------
 include_directories(include)
-file(GLOB SOURCES "src/*.cpp")
+set(SOURCES
+    src/main.cpp
+    src/BookstoreApp.cpp
+    src/Khohang.cpp
+    src/LichSuHoaDon.cpp
+)
 
 # Tạo phần mềm từ code của nhóm + code của ImGui
 add_executable(BookstoreManagement ${SOURCES} ${IMGUI_SOURCES})
