@@ -12,7 +12,6 @@ private:
     QuanLyKho    kho;
     LichSuHoaDon lichSu;
 
-    /* Trang thai UI */
     bool showBanHang    = false;
     bool showKho        = false;
     bool showLichSu     = false;
@@ -21,19 +20,16 @@ private:
     bool showFormThem   = false;
     bool showFormNhap   = false;
 
-    /* Du lieu ban hang dang tao */
     ChiTietHoaDon hdChiTiet[MAX_CHITIET]{};
     int   hdSoMatHang    = 0;
     float hdTongTruocGiam= 0;
     float hdGiamSoLuong  = 0;
     int   hdHangKH       = 0;
 
-    /* Con tro trang thai */
     HangHoa* hangDangChon = nullptr;
     HangHoa* hangDangSua  = nullptr;
     HoaDon*  hdDangXem    = nullptr;
 
-    /* Buffer nhap lieu */
     char buf_ten[128]      = {};
     char buf_ncc[128]      = {};
     char buf_gia_nhap[32]  = {};
@@ -48,7 +44,6 @@ private:
 
     std::string thongBao   = "";
 
-    /* Render methods */
     void renderMenuChinh();
     void renderBanHang();
     void renderQuanLyKho();

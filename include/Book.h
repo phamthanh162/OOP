@@ -9,8 +9,8 @@ private:
 public:
     Book(std::string id, std::string title, double basePrice, std::string author);
 
-    // Ghi đè hàm tính giá của lớp cha (Thể hiện tính Đa hình)
-    double calculatePrice() const override;
+    // Ghi đè hàm tính tiền. Giả sử Sách không giảm giá theo số lượng.
+    double CalculateLineTotal(int quantity) const override;
 
-    std::string getAuthor() const;
+    std::string GetAuthor() const;
 };
