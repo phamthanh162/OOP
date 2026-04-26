@@ -9,6 +9,7 @@
 #include <GLFW/glfw3.h>
 #include <format>
 #include <ranges>
+#include <algorithm>
 #include <cstring>
 #include <cstdio>
 #include <ctime>
