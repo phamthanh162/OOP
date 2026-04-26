@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(BookstoreManagement)
 
 # Chuẩn của dự án - C++ 26
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Bật tính năng tự động tải thư viện của CMake
@@ -48,7 +48,12 @@ set(IMGUI_SOURCES
 # 3. CẤU HÌNH DỰ ÁN CỦA NHÓM
 # ---------------------------------------------------------
 include_directories(include)
-file(GLOB SOURCES "src/*.cpp")
+set(SOURCES
+    src/main.cpp
+    src/BookstoreApp.cpp
+    src/Khohang.cpp
+    src/LichSuHoaDon.cpp
+)
 
 # Tạo phần mềm từ code của nhóm + code của ImGui
 add_executable(BookstoreManagement ${SOURCES} ${IMGUI_SOURCES})
