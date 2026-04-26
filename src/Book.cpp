@@ -4,11 +4,11 @@
 Book::Book(std::string id, std::string title, double basePrice, std::string author)
     : Item(std::move(id), std::move(title), basePrice), author(std::move(author)) {}
 
-double Book::calculatePrice() const {
-    // Giả sử sách thông thường giữ nguyên giá bìa
-    return basePrice;
+double Book::CalculateLineTotal(int quantity) const {
+    // Giá giữ nguyên, chỉ nhân với số lượng
+    return basePrice * quantity;
 }
 
-std::string Book::getAuthor() const {
+std::string Book::GetAuthor() const {
     return author;
 }
