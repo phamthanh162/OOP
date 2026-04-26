@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(BookstoreManagement)
 
 # Chuẩn của dự án - C++ 26
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Bật tính năng tự động tải thư viện của CMake
